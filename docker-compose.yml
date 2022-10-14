@@ -1,0 +1,15 @@
+verson: "3.8"
+services:
+  frontend:
+    build: ./client
+    ports: -3000:3000
+  backend:
+    build: ./server
+    ports: -3001:3001
+    environment: MONGO_URI:mongodb://db
+  db:
+    image: mongo
+    ports: -27017:27017
+    volume:
+      -
+volume:
