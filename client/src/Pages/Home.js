@@ -43,13 +43,13 @@ const Home = () => {
   return (
     <div>
       <CardCarousel />
-      <h1 className="bg-primary font-weight-normal text-white text-center my-2   container">
-        Catalog
-      </h1>
+      <blockquote class="blockquote text-left  container">
+        <h5 className=" p-3 mb-2 bg-light text-dark ">Popular Catagories</h5>
+      </blockquote>
       <Catalog CatItem={Category} />;
-      <h1 className="bg-primary text-white text-center my-1 container">
-        Product
-      </h1>
+      <blockquote class="blockquote text-left  container">
+        <h5 className=" p-3 mb-2 bg-warning text-dark ">Popular Products</h5>
+      </blockquote>
       <ProductItem ProItem={Product} />
     </div>
   );

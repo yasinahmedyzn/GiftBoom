@@ -17,12 +17,12 @@ const Catagorylist = (props) => {
         image={props.img}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h5" text-center component="div">
           {props.title}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" component={Link} to="/electronic">
+        <Button size="small" component={Link} to="/flowers">
           view product
         </Button>
       </CardActions>

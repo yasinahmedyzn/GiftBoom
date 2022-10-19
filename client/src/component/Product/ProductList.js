@@ -20,11 +20,11 @@ const ProductList = (props) => {
           {props.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.code}
+          code: {props.code}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{props.price}</Button>
+        <Button size="small">${props.price}</Button>
         <Button size="small">add to cart</Button>
       </CardActions>
     </Card>

@@ -1,15 +1,39 @@
-verson: "3.8"
+version: '3.3'
 services:
-  frontend:
-    build: ./client
-    ports: -3000:3000
+
   backend:
     build: ./server
-    ports: -3001:3001
-    environment: MONGO_URI:mongodb://db
+    ports:
+      - 3001:3001
+    environment:
+      - DATABASE_DB=example
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=/run/secrets/db-password
+      - DATABASE_HOST=db
+      - NODE_ENV=development
+    depends_on:
+      - db
   db:
     image: mongo
-    ports: -27017:27017
-    volume:
-      -
-volume:
+    ports:
+     - 27017:27017
+    restart: always
+    volumes:
+      - my-data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8080:8080
+
+  frontend:
+    build: ./client
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+
+volumes:
+  my-data:
+
+
