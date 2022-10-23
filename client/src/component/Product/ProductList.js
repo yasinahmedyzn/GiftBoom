@@ -6,9 +6,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useCart } from "react-use-cart";
 const ProductList = (props) => {
+  const { addItem } = useCart();
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} key={props.id}>
       <CardMedia
         component="img"
         alt="green iguana"

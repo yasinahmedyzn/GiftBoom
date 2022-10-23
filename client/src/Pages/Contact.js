@@ -1,11 +1,7 @@
 import React from "react";
-import Electronic from "../component/ProCard/electronics";
+
 const Contact = () => {
-  return (
-    <div>
-      <Electronic />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Contact;

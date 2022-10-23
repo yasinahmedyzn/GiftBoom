@@ -8,7 +8,9 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Navbar from "./Header/Navbar";
 import Footer from "./Footer/footer";
-import Electronic from "./component/ProCard/electronics";
+import GiftCard from "./component/ProCard/GiftCard";
+import Flowers from "./component/ProCard/Flowers";
+import Gadgets from "./component/ProCard/Gadgets";
 import Cart from "./component/Cart/carts";
 import { CartProvider } from "react-use-cart";
 const App = () => {
@@ -22,7 +24,9 @@ const App = () => {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/services" element={<Service />} />
             <Route exact path="/contact" element={<Contact />} />
-            <Route exact path="/flowers" element={<Electronic />} />
+            <Route exact path="/product/GiftCard" element={<GiftCard />} />
+            <Route exact path="/product/Gadgets" element={<Gadgets />} />
+            <Route exact path="/product/Flowers" element={<Flowers />} />
             <Route exact path="/cart" element={<Cart />} />
           </Routes>
         </CartProvider>

@@ -6,15 +6,15 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import list from "./data";
+import { flowers_list } from "./data";
 import { useCart } from "react-use-cart";
-const Electronic = () => {
+const Flowers = () => {
   const { addItem } = useCart();
 
   return (
     <div className="container px-4">
       <div className=" row ">
-        {list.map((item) => {
+        {flowers_list.map((item) => {
           return (
             <Card sx={{ maxWidth: 345 }} key={item.id}>
               <CardMedia
@@ -28,7 +28,7 @@ const Electronic = () => {
                   {item.title}
                 </Typography>
                 <Typography gutterBottom variant="h5" component="div">
-                  {item.author}
+                  {item.code}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -45,4 +45,4 @@ const Electronic = () => {
   );
 };
 
-export default Electronic;
+export default Flowers;

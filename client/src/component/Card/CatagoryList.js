@@ -7,6 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+
 const Catagorylist = (props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -22,7 +23,7 @@ const Catagorylist = (props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" component={Link} to="/flowers">
+        <Button size="small" component={Link} to={"/product/" + props.title}>
           view product
         </Button>
       </CardActions>
