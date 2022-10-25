@@ -43,7 +43,7 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href={"/home"}>
+              <a href={"/login"}>
                 <i className="fa-solid fa-user"></i>
               </a>
             </li>

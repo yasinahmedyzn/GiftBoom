@@ -12,6 +12,8 @@ import GiftCard from "./component/ProCard/GiftCard";
 import Flowers from "./component/ProCard/Flowers";
 import Gadgets from "./component/ProCard/Gadgets";
 import Cart from "./component/Cart/carts";
+import Login from "./component/Auth/login";
+import Signup from "./component/Auth/signup";
 import { CartProvider } from "react-use-cart";
 const App = () => {
   return (
@@ -28,6 +30,8 @@ const App = () => {
             <Route exact path="/product/Gadgets" element={<Gadgets />} />
             <Route exact path="/product/Flowers" element={<Flowers />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<Signup />} />
           </Routes>
         </CartProvider>
       </Router>
