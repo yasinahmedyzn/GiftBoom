@@ -7,7 +7,7 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 
-const Signup = () => {
+const SignupForm = () => {
   return (
     <div className="container">
       <MDBContainer fluid className="p-3 my-5">
@@ -15,14 +15,14 @@ const Signup = () => {
           <MDBCol col="10" md="6">
             <img
               src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-              class="img-fluid"
+              className="img-fluid"
               alt="auth"
             />
           </MDBCol>
 
           <MDBCol col="4" md="5">
             <div className="row">
-              <div class="col-md-6 mb-2">
+              <div className="col-md-6 mb-2">
                 <MDBInput
                   wrapperClass="mb-2"
                   label="First Name"
@@ -31,7 +31,7 @@ const Signup = () => {
                   size="lg"
                 />
               </div>
-              <div class="col-md-6 mb-2">
+              <div className="col-md-6 mb-2">
                 <MDBInput
                   wrapperClass="mb-2"
                   label="Last Name"
@@ -73,4 +73,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupForm;
